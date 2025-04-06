@@ -112,20 +112,20 @@ void main() async {
   }
 
   startupLog.fine("Finally telling Flutter to run the app widget");
-  runApp(const Flow());
+  runApp(const PennyTrack());
 }
 
-class Flow extends StatefulWidget {
-  const Flow({super.key});
+class PennyTrack extends StatefulWidget {
+  const PennyTrack({super.key});
 
   @override
-  State<Flow> createState() => FlowState();
+  State<PennyTrack> createState() => PennyTrackState();
 
-  static FlowState of(BuildContext context) =>
-      context.findAncestorStateOfType<FlowState>()!;
+  static PennyTrackState of(BuildContext context) =>
+      context.findAncestorStateOfType<PennyTrackState>()!;
 }
 
-class FlowState extends State<Flow> {
+class PennyTrackState extends State<PennyTrack> {
   Locale _locale = FlowLocalizations.supportedLanguages.first;
   ThemeMode _themeMode = ThemeMode.system;
 
@@ -334,7 +334,7 @@ void initializeFileLogger() async {
       mainLogAppender = RotatingFileAppender(
         baseFilePath: path.join(
           logsDir,
-          flowDebugMode ? "flow_debug.log" : "flow.log",
+          flowDebugMode ? "pennytrack_debug.log" : "pennytrack.log",
         ),
         keepRotateCount: 5,
       )..attachToLogger(Logger.root);

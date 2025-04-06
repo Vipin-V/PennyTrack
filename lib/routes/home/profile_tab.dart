@@ -15,7 +15,6 @@ import "package:go_router/go_router.dart";
 import "package:material_symbols_icons/symbols.dart";
 import "package:moment_dart/moment_dart.dart";
 import "package:shared_preferences/shared_preferences.dart";
-import "package:simple_icons/simple_icons.dart";
 
 class ProfileTab extends StatefulWidget {
   const ProfileTab({super.key});
@@ -73,23 +72,8 @@ class _ProfileTabState extends State<ProfileTab> {
             leading: const Icon(Symbols.restore_page_rounded),
             onTap: () => context.push("/import"),
           ),
-          const SizedBox(height: 32.0),
-          ListHeader("tabs.profile.community".t(context)),
-          ListTile(
-            title: Text("tabs.profile.joinDiscord".t(context)),
-            leading: const Icon(SimpleIcons.discord),
-            onTap: () => openUrl(discordInviteLink),
-          ),
-          ListTile(
-            title: Text("tabs.profile.support".t(context)),
-            leading: const Icon(Symbols.favorite_rounded),
-            onTap: () => context.push("/support"),
-          ),
-          ListTile(
-            title: Text("visitGitHubRepo".t(context)),
-            leading: const Icon(SimpleIcons.github),
-            onTap: () => openUrl(flowGitHubRepoLink),
-          ),
+
+
           if (flowDebugMode) ...[
             const SizedBox(height: 32.0),
             const ListHeader("Debug options"),
@@ -162,15 +146,11 @@ class _ProfileTabState extends State<ProfileTab> {
             child: Text("v$appVersion", style: context.textTheme.labelSmall),
           ),
           Center(
-            child: InkWell(
-              borderRadius: BorderRadius.circular(8.0),
-              onTap: () => openUrl(maintainerGitHubLink),
-              child: Opacity(
-                opacity: 0.5,
-                child: Text(
-                  "tabs.profile.withLoveFromTheCreator".t(context),
-                  style: context.textTheme.labelSmall,
-                ),
+            child: Opacity(
+              opacity: 0.5,
+              child: Text(
+                "tabs.profile.withLoveFromTheCreator".t(context),
+                style: context.textTheme.labelSmall,
               ),
             ),
           ),

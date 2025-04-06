@@ -200,7 +200,7 @@ class _GroupPieChartState<T> extends State<GroupPieChart<T>> {
     bool selected = false,
     int index = 0,
   }) {
-    final bool usingDarkTheme = Flow.of(context).useDarkTheme;
+    final bool usingDarkTheme = PennyTrack.of(context).useDarkTheme;
 
     final Color color =
         (usingDarkTheme ? accentColors : primaryColors)[index %

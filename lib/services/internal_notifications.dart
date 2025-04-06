@@ -48,7 +48,7 @@ class InternalNotificationsService {
   /// Adds the following notifications:
   /// - Auto backup reminder
   /// - Rate app
-  /// - Star on GitHub
+
   void checkAndAddNotifications() async {
     if (_notifications.value.isNotEmpty) {
       return;
@@ -114,18 +114,7 @@ class InternalNotificationsService {
     }
 
     try {
-      final DateTime? lastStarOnGitHubShowedAt =
-          TransitiveLocalPreferences().lastStarOnGitHubShowedAt.get();
-
-      if (shouldExecuteScheduledTask(
-        Duration(days: 120),
-        lastStarOnGitHubShowedAt,
-      )) {
-        add(StarOnGitHub());
-        await TransitiveLocalPreferences().lastStarOnGitHubShowedAt.set(
-          Moment.now(),
-        );
-      }
+      // No notifications to show
     } catch (e) {
       // Silent fail
     }

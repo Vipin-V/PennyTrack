@@ -94,7 +94,7 @@ class NotificationsService {
       final WindowsInitializationSettings initializationSettingsWindows =
           WindowsInitializationSettings(
             appName: "Flow",
-            appUserModelId: "TODO @sadespresso",
+            appUserModelId: "TODO @PennyTrack",
             guid: windowsNotificationGuid,
           );
 

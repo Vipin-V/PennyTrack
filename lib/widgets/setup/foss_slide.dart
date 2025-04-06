@@ -1,13 +1,9 @@
-import "package:flow/constants.dart";
 import "package:flow/data/flow_icon.dart";
 import "package:flow/l10n/extensions.dart";
 import "package:flow/theme/theme.dart";
-import "package:flow/utils/utils.dart";
 import "package:flow/widgets/general/flow_icon.dart";
-import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
 import "package:material_symbols_icons/symbols.dart";
-import "package:simple_icons/simple_icons.dart";
 
 class FossSlide extends StatelessWidget {
   const FossSlide({super.key});
@@ -36,37 +32,9 @@ class FossSlide extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 8.0),
-          Text.rich(
-            TextSpan(
-              style: context.textTheme.bodyLarge,
-              children: [
-                TextSpan(
-                  text: "setup.slides.foss.description".t(context),
-                  style: context.textTheme.bodyLarge,
-                ),
-                const TextSpan(text: " "),
-                TextSpan(
-                  text: String.fromCharCode(SimpleIcons.github.codePoint),
-                  style: TextStyle(
-                    fontFamily: SimpleIcons.github.fontFamily,
-                    package: SimpleIcons.github.fontPackage,
-                    height: 1.0,
-                    color: context.colorScheme.primary,
-                  ),
-                  recognizer:
-                      TapGestureRecognizer()
-                        ..onTap = (() => openUrl(flowGitHubRepoLink)),
-                ),
-                const TextSpan(text: " "),
-                TextSpan(
-                  text: "setup.slides.foss.seeRepo".t(context),
-                  style: TextStyle(color: context.colorScheme.primary),
-                  recognizer:
-                      TapGestureRecognizer()
-                        ..onTap = (() => openUrl(flowGitHubRepoLink)),
-                ),
-              ],
-            ),
+          Text(
+            "setup.slides.foss.description".t(context),
+            style: context.textTheme.bodyLarge,
           ),
           const SizedBox(height: 16.0),
         ],

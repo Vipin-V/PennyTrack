@@ -16,7 +16,7 @@
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
     <application
-        android:label="Flow"
+        android:label="PennyTrack"
         android:icon="@mipmap/ic_launcher"
         android:supportsRtl="true">
         <activity

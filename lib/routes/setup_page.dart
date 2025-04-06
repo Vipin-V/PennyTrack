@@ -1,7 +1,7 @@
 import "package:flow/l10n/extensions.dart";
 import "package:flow/theme/theme.dart";
 import "package:flow/widgets/general/button.dart";
-import "package:flow/widgets/setup/foss_slide.dart";
+
 import "package:flow/widgets/setup/offline_slide.dart";
 import "package:flow/widgets/setup/welcome_slide.dart";
 import "package:flutter/material.dart";
@@ -19,7 +19,7 @@ class SetupPage extends StatefulWidget {
 class _SetupPageState extends State<SetupPage> {
   late final PageController _pageController;
 
-  static const int slideCount = 3;
+  static const int slideCount = 2;
 
   bool lastSlide = false;
 
@@ -47,7 +47,7 @@ class _SetupPageState extends State<SetupPage> {
       body: SafeArea(
         child: PageView(
           controller: _pageController,
-          children: const [WelcomeSlide(), FossSlide(), OfflineSlide()],
+          children: const [WelcomeSlide(), OfflineSlide()],
         ),
       ),
       bottomNavigationBar: SafeArea(

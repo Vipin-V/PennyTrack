@@ -1,5 +1,5 @@
 {
-    "appName": "Flow",
+    "appName": "PennyTrack",
     "appShortDesc": "Votre suivi financier personnel",
 
     "visitGitHubRepo": "Visitez le dépôt sur GitHub",
@@ -30,7 +30,7 @@
     "general.disabled": "Désactivé",
     "general.selectLocation": "Choisir un lieu",
     "general.nextNDays": "Prochain(s) {} jour(s)",
-    "general.flow": "Flow",
+    "general.flow": "PennyTrack",
     "general.unlockToOpen": "Déverrouiller pour ouvrir Flow",
 
     "setup.getStarted": "Commencer",

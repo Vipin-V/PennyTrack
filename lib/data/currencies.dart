@@ -17,22 +17,7 @@ class CurrencyData {
   });
 }
 
-/// All data is retreived from <http://www.currency-iso.org/en/home/tables/table-a1.html>
-///
-/// Last updated: 29 Dec 2023 by @sadespresso
-///
-/// List of excluded entries:
-/// * **Any currency with no currency code**
-/// * XBA - Bond Markets Unit European Composite Unit (EURCO) (ZZ01_Bond Markets Unit European_EURCO)
-/// * XBB - Bond Markets Unit European Monetary Unit (E.M.U.-6) (ZZ02_Bond Markets Unit European_EMU-6)
-/// * XBC - Bond Markets Unit European Unit of Account 9 (E.U.A.-9) (ZZ03_Bond Markets Unit European_EUA-9)
-/// * XBD - Bond Markets Unit European Unit of Account 17 (E.U.A.-17) (ZZ04_Bond Markets Unit European_EUA-17)
-/// * XTS - Codes specifically reserved for testing purposes (ZZ06_Testing_Code)
-/// * XXX - The codes assigned for transactions where no currency is involved (ZZ07_No_Currency)
-/// * XAU - Gold (ZZ08_Gold)
-/// * XPD - Palladium (ZZ09_Palladium)
-/// * XPT - Platinum (ZZ10_Platinum)
-/// * XAG - Silver (ZZ11_Silver)
+
 final List<CurrencyData> iso4217Currencies = [
   const CurrencyData(country: "AFGHANISTAN", name: "Afghani", code: "AFN"),
   const CurrencyData(country: "ÅLAND ISLANDS", name: "Euro", code: "EUR"),

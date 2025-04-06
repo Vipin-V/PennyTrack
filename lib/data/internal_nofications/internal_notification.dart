@@ -1,7 +1,7 @@
 import "package:flow/data/flow_icon.dart";
 import "package:flow/entity/backup_entry.dart";
 import "package:material_symbols_icons/symbols.dart";
-import "package:simple_icons/simple_icons.dart";
+
 
 enum InternalNotificationPriority {
   low(0),
@@ -23,17 +23,7 @@ abstract class InternalNotification<T> {
   InternalNotificationPriority get priority;
 }
 
-class StarOnGitHub extends InternalNotification<Null> {
-  @override
-  final FlowIconData icon = const IconFlowIcon(SimpleIcons.github);
 
-  @override
-  final Null payload = null;
-
-  @override
-  final InternalNotificationPriority priority =
-      InternalNotificationPriority.low;
-}
 
 class RateApp extends InternalNotification<bool> {
   @override

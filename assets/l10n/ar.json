@@ -1,5 +1,5 @@
 {
-    "appName": "Flow",
+    "appName": "PennyTrack",
     "appShortDesc": "متتبع التمويل الشخصي الخاص بك",
 
     "visitGitHubRepo": "زيارة المستودع على جيثب",
@@ -30,7 +30,7 @@
     "general.disabled": "معطل",
     "general.selectLocation": "اختر الموقع",
     "general.nextNDays": "الأيام القادمة {}",
-    "general.flow": "Flow",
+    "general.flow": "PennyTrack",
     "general.unlockToOpen": "افتح القفل لاستخدام Flow",
 
     "setup.getStarted": "ابدأ الآن",

@@ -1,5 +1,5 @@
 {
-    "appName": "Flow",
+    "appName": "PennyTrack",
     "appShortDesc": "Kişisel finans takipçiniz",
 
     "visitGitHubRepo": "GitHub'da depoyu ziyaret edin",
@@ -304,7 +304,7 @@
     "tabs.home.transactionsCount": "{count} Hareket",
     "tabs.home.last7days": "Son 7 gün",
     "tabs.home.totalBalance": "Toplam bilanço",
-    "tabs.home.flow": "Flow",
+    "tabs.home.flow": "PennyTrack",
     "tabs.home.reminders.autoBackup": "Bir yedekleme oluşturuldu",
     "tabs.home.reminders.autoBackup.subtitle": "Otomatik olarak oluşturuldu",
     "tabs.home.reminders.starOnGitHub": "Flow'a GitHub'da yıldız verin",
