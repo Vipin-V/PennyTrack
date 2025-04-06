@@ -157,6 +157,19 @@ class PreferencesPageState extends State<PreferencesPage> {
               trailing: const Icon(Symbols.chevron_right_rounded),
             ),
             ListTile(
+              title: Text("SMS Bank Transactions"),
+              leading: const Icon(Symbols.sms_rounded),
+              onTap: () => _pushAndRefreshAfter("/preferences/smsParsing"),
+              subtitle: Text(
+                LocalPreferences().enableSmsParsing.get()
+                    ? "general.enabled".t(context)
+                    : "general.disabled".t(context),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
+              trailing: const Icon(Symbols.chevron_right_rounded),
+            ),
+            ListTile(
               leading: const Icon(Symbols.list_rounded),
               title: Text("preferences.transactions.listTile".t(context)),
               onTap:

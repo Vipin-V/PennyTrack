@@ -25,6 +25,7 @@ import "package:flow/routes/preferences/money_formatting_preferences_page.dart";
 import "package:flow/routes/preferences/numpad_preferences_page.dart";
 import "package:flow/routes/preferences/pending_transactions_preferences_page.dart";
 import "package:flow/routes/preferences/reminders_preferences_page.dart";
+import "package:flow/routes/preferences/sms_parsing_page.dart";
 import "package:flow/routes/preferences/theme_preferences_page.dart";
 import "package:flow/routes/preferences/transaction_geo_preferences_page.dart";
 import "package:flow/routes/preferences/transaction_list_item_appearance_preferences_page.dart";
@@ -218,6 +219,10 @@ final router = GoRouter(
           builder:
               (context, state) =>
                   const TransactionListItemAppearancePreferencesPage(),
+        ),
+        GoRoute(
+          path: "smsParsing",
+          builder: (context, state) => const SmsBankTransactionParsingPage(),
         ),
       ],
     ),

@@ -1,19 +1,5 @@
-// Flow - A personal finance tracking app
+// PennyTrack - A personal finance tracking app
 //
-// Copyright (C) 2024 Batmend Ganbaatar and authors of Flow
-
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import "dart:async";
 import "dart:io";
@@ -34,6 +20,7 @@ import "package:flow/routes.dart";
 import "package:flow/services/exchange_rates.dart";
 import "package:flow/services/local_auth.dart";
 import "package:flow/services/notifications.dart";
+import "package:flow/services/sms_parser.dart";
 import "package:flow/services/sync.dart";
 import "package:flow/services/transactions.dart";
 import "package:flow/services/user_preferences.dart";
@@ -115,6 +102,13 @@ void main() async {
     SyncService();
   } catch (e, stackTrace) {
     startupLog.severe("Failed to initialize SyncService", e, stackTrace);
+  }
+
+  try {
+    startupLog.fine("Initializing SMS Parser Service");
+    await SmsParserService().initialize();
+  } catch (e, stackTrace) {
+    startupLog.severe("Failed to initialize SMS Parser Service", e, stackTrace);
   }
 
   startupLog.fine("Finally telling Flutter to run the app widget");

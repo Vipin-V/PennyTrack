@@ -50,13 +50,18 @@ class LocalPreferences {
 
   late final BoolSettingsEntry autoAttachTransactionGeo;
 
-  late final BoolSettingsEntry privacyMode;
-
   /// This refers to biometric auth, passwords, pins from the operating system
   late final BoolSettingsEntry requireLocalAuth;
 
+  /// Display preferences
   late final BoolSettingsEntry preferFullAmounts;
   late final BoolSettingsEntry useCurrencySymbol;
+
+  /// SMS parsing preferences
+  late final BoolSettingsEntry enableSmsParsing;
+
+  /// Privacy mode to mask sensitive data at startup
+  late final BoolSettingsEntry privacyMode;
 
   late final PendingTransactionsLocalPreferences pendingTransactions;
   late final ThemeLocalPreferences theme;
@@ -125,12 +130,6 @@ class LocalPreferences {
       initialValue: false,
     );
 
-    privacyMode = BoolSettingsEntry(
-      key: "privacyMode",
-      preferences: _prefs,
-      initialValue: false,
-    );
-
     requireLocalAuth = BoolSettingsEntry(
       key: "requireLocalAuth",
       preferences: _prefs,
@@ -146,6 +145,18 @@ class LocalPreferences {
       key: "useCurrencySymbol",
       preferences: _prefs,
       initialValue: true,
+    );
+
+    enableSmsParsing = BoolSettingsEntry(
+      key: "enableSmsParsing",
+      preferences: _prefs,
+      initialValue: false,
+    );
+
+    privacyMode = BoolSettingsEntry(
+      key: "privacyMode",
+      preferences: _prefs,
+      initialValue: false,
     );
 
     lastRequestedAppStoreReview = DateTimeSettingsEntry(
